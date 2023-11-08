@@ -77,7 +77,7 @@ class User {
 
   void logiIn(User u1) {
     if (flag) {
-      System.out.println("您已经登录账号" + this.logName);
+      System.out.println("您已经登录账户" + this.logName);
       this.begin(u1);
 
     } else {
