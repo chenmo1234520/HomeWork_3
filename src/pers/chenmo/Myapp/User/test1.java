@@ -109,12 +109,14 @@ class User {
               this.logiIn(u1);
             }
           } else {
-            System.out.println("您还没有创建该用户！");
-            this.begin(u1);
-
+            if (i >= UnameList.size() - 1) {
+              System.out.println("您还没有创建该用户！");
+              this.begin(u1);
+            }
           }
 
         }
+
       }
 
     }
@@ -150,7 +152,7 @@ class User {
 
   void quit(User u1) {
     if (flag) {
-      this.flag = true;
+      this.flag = false;
       System.out.println("退出账号" + logName + "成功！");
 
       this.logName = null;
